@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Duyệt bình ổn giá thị trường - Gateway";
+    Layout = "~/Views/Shared/_Layout_V2.cshtml";
+}
+<style>
+    .Viewtab .tab button {
+        font-size: 13px;
+        width: auto;
+    }
+</style>
+<div class="AutoFix">
+    <div id="form_search">
+        <div class="col-md-12">
+            <div class="col-md-1 c1">
+                <label style="margin-left: -15px;">Mã NCC</label>
+            </div>
+            <div class="col-md-1 c2">
+                <select id="NhaCC" class="form-control selectpicker" data-live-search="true" onchange="js_searchbox()">
+                </select>
+            </div>
+            <div class="col-md-1 c3">Ngày cập nhật</div>
+            <div class="col-md-1 c4">
+                <input type="date" name="NgayCapNhat" id="NgayCapNhat" class="form-control" value="" onchange="js_searchbox()">
+            </div>
+            <div class="col-md-1 c5">
+                <a href="#" onclick="HanhDongsave('2')" class="form-control btn btn-info"><i class="fa fa-times" aria-hidden="true" style="margin-left: 6px;margin-top: 3px;"></i>Từ chối</a>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-1 c1">
+                <label style="margin-left: -15px;">Mã hàng /Tên hàng</label>
+            </div>
+            <div class="col-md-1 c2">
+                <select id="MaHang" class="form-control selectpicker" data-live-search="true" onchange="js_searchbox()">
+                    <option value="">--- Chọn mã hàng ---</option>
+                </select>
+            </div>
+            <div class="col-md-1 c3">Trạng thái</div>
+            <div class="col-md-1 c4">
+                <select id="TrangThai" class="form-control selectpicker" data-live-search="true" onchange="js_searchbox();">
+                    <option value="">-- Chọn trạng thái -- </option>
+                    <option value="0">Gửi duyệt</option>
+                    <option value="1">Đã duyệt</option>
+                    <option value="2">Từ chối</option>
+                </select>
+            </div>
+            <div class="col-md-1 c5">
+                <a href="#" onclick="HanhDongsave('1')" class="form-control btn btn-info" style=" background: #269abc !important"><i class="fa fa-save" aria-hidden="true" style="margin-left: 6px;margin-top: 3px;"></i>Xác nhận</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="margin-top: 124px ">
+    <div class="col-12 stretch-card pl-0 pr-0">
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="table-responsive_2" id="div-content">
+                 aaaaa
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('#txtHead').html("Duyệt bình ổn giá thị trường - Gateway");
+        $('#f_dev').html("");
+        $('#f_header').html("");
+        $('#v_review').hide();
+        $('#v_view').hide();
+        $('#v_approve').hide();
+    });
+    
+</script>
